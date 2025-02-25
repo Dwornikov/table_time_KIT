@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор расписания КИТ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Выберите расписание</h1>
+        <div class="selector">
+            <select id="category" onchange="updateOptions()">
+                <option value="">Выберите категорию</option>
+                <option value="group">Группа</option>
+                <option value="teacher">Преподаватель</option>
+            </select>
+            <select id="option" disabled>
+                <option value="">Выберите...</option>
+            </select>
+            <button id="goToScheduleBtn" class="btn" onclick="redirectToSchedule()">Перейти</button>
+            <button id="adminLoginBtn" class="btn">Вход для администратора</button>
+        </div>
+    </div>
+
+    <!-- Модальное окно для входа админа -->
+    <div id="adminLoginModal" class="modal hidden">
+        <div class="modal-content">
+            <h2>Вход для администратора</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminUsername">Логин:</label>
+                    <input type="text" id="adminUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="adminPassword">Пароль:</label>
+                    <input type="password" id="adminPassword" required>
+                </div>
+                <button type="submit" class="btn">Войти</button>
+                <button type="button" class="btn cancel-btn" onclick="closeModal()">Отмена</button>
+            </form>
+            <p id="adminErrorMessage" style="color: #f44336;"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

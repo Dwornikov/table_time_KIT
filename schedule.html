@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание КИТ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Расписание</h1>
+        <div id="schedule">
+            <table id="scheduleTable" class="weekly-schedule">
+                <thead>
+                    <tr>
+                        <th>Время</th>
+                        <th>Понедельник<br id="mondayDate"></th>
+                        <th>Вторник<br id="tuesdayDate"></th>
+                        <th>Среда<br id="wednesdayDate"></th>
+                        <th>Четверг<br id="thursdayDate"></th>
+                        <th>Пятница<br id="fridayDate"></th>
+                    </tr>
+                </thead>
+                <tbody id="scheduleBody"></tbody>
+            </table>
+        </div>
+        <button class="btn" onclick="goBack()">Вернуться на главную</button>
+    </div>
+
+    <script src="schedule.js"></script>
+</body>
+</html>
